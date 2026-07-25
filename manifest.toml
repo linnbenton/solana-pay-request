@@ -1,0 +1,24 @@
+[plugin]
+name = "solana-pay-request"
+version = "0.1.0"
+authors = ["Linn Benton <linnbenton@github.com>"]
+description = "Generates Solana Pay transaction request URLs and QR payloads for AI payment terminals."
+wasm_path = "target/wasm32-wasip2/release/solana_pay_request.wasm"
+license = "MIT"
+
+[capabilities]
+network = true
+file_system = false
+
+[permissions]
+requested = [
+    "http_client",
+    "config_read"
+]
+
+[config]
+default_rpc_url = "https://api.mainnet-beta.solana.com"
+allowed_mints = [
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", # USDC
+    "So11111111111111111111111111111111111111112"  # WSOL
+]

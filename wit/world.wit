@@ -1,0 +1,12 @@
+package zeroclaw:plugins;
+
+world tool-plugin {
+    import log: func(level: string, message: string);
+    import config-read: func(key: string) -> string;
+    import http-client-post: func(url: string, body: string) -> string;
+
+    export name: func() -> string;
+    export description: func() -> string;
+    export parameters-schema: func() -> string;
+    export execute: func(args: string) -> result<string, string>;
+}
