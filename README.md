@@ -268,4 +268,4 @@ test result:
 
 This project is licensed under the MIT License.
 
-See the `LICENSE` file for more information.
+See the [LICENSE](./LICENSE) file for more information.
